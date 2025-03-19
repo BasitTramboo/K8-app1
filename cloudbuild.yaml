@@ -22,3 +22,6 @@ substitutions:
   _IMAGE_NAME: 'us-docker.pkg.dev/${PROJECT_ID}/k8s-assignment/app1'
   _CLUSTER_LOCATION: 'us-central1-c'
   _CLUSTER_NAME: 'k8s-assignment-cluster-1'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
