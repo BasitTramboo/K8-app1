@@ -21,7 +21,6 @@ def calculate():
                     "file": None,
                     "error": "Invalid JSON input."
             }
-
     # 2. Verify that file exists
     if not os.path.isfile("/Basit_PV_dir/" + request.json["file"]):
         return {
