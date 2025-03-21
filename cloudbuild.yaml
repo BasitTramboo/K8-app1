@@ -9,14 +9,8 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', '--all-tags', '${_IMAGE_NAME}']
 
-# Step 3: Deploy the kubernetes workload to GKE cluster. (i.e. deployment.yaml, service.yaml and pvc.yaml)
-# - name: "gcr.io/cloud-builders/gke-deploy"
-#   args:
-#   - run
-#   - --filename=./kubernetes
-#   - --image=${_IMAGE_NAME}:$SHORT_SHA
-#   - --location=${_CLUSTER_LOCATION}
-#   - --cluster=${_CLUSTER_NAME}
+# Step 3: Kubectl Apply
+# - Apply the kubernetes configuration files to the cluster
 
 - name: "gcr.io/cloud-builders/kubectl"
   env:
