@@ -10,7 +10,7 @@ app = Flask(__name__)
 def calculate():
 
 
-    # 1. Validate input JSON to ensure file name was provided
+    # 1. Validate input JSON to ensure file name was provided:
     try:
         if request.json["file"] == None:
             return {
@@ -30,7 +30,7 @@ def calculate():
             }
 
 
-    # 3. Send the "file" and "product" parameters to container 2 and return response back.
+    # 3. Send the "file" and "product" parameters to App 2 and return response back.
     response = requests.post(url="http://app2-service/sum",json=request.json, headers={'Content-Type': 'application/json'})
     return response.json()
 
