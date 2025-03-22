@@ -17,6 +17,7 @@ spec:
       containers:
       - name: app1-container
         image: us-docker.pkg.dev/k8-cloud-computing/k8s-assignment/app1:latest
+        imagePullPolicy: Always
         volumeMounts:
         - mountPath: /Basit_PV_dir
           name: standard-volume
