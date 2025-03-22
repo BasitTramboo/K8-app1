@@ -31,7 +31,7 @@ def calculate():
 
 
     # 3. Send the "file" and "product" parameters to container 2 and return response back.
-    response = requests.post(url="http://app2-service:7000/sum",json=request.json, headers={'Content-Type': 'application/json'})
+    response = requests.post(url="http://app2-service/sum",json=request.json, headers={'Content-Type': 'application/json'})
     return response.json()
 
 @app.route("/store-file", methods=["POST"])
